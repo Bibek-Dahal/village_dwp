@@ -2,17 +2,18 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from .forms import CustomUserCreationForm,CustomUserChangeForm
 from user_account.models import MyUser
-
+from django.utils.translation import gettext_lazy as  _
 
 class MyUserAdmin(UserAdmin):
     # The forms to add and change user instances
     form = CustomUserChangeForm
     add_form = CustomUserCreationForm
+    
 
     # The fields to be used in displaying the User model.
     # These override the definitions on the base UserAdmin
     # that reference specific fields on auth.User.
-    list_display = ('full_name','email', 'first_name','last_name','phone_num','is_superuser')
+    list_display = ('get_full_name','email', 'first_name','last_name','phone_num','is_superuser')
     search_fields = ('email', 'first_name', 'last_name',)
     list_filter = ('is_superuser','is_active',)
     ordering = ('email',)
@@ -20,7 +21,18 @@ class MyUserAdmin(UserAdmin):
         (None, {'fields': ('email', 'password')}),
         ('Personal info', {'fields': ('first_name','middle_name','last_name')}),
         ('contact info',{'fields':('phone_num',)}),
-        ('Permissions', {'fields': ('is_superuser','is_staff','is_active')}),
+        (
+            _("Permissions"),
+            {
+                "fields": (
+                    "is_active",
+                    "is_staff",
+                    "is_superuser",
+                    "groups",
+                    "user_permissions",
+                ),
+            },
+        ),
     )
     # add_fieldsets is not a standard ModelAdmin attribute. UserAdmin
     # overrides get_fieldsets to use this attribute when creating a user.
@@ -32,6 +44,10 @@ class MyUserAdmin(UserAdmin):
     )
 
     filter_horizontal = ()
+
+    def get_full_name(self , obj):
+        return f"{obj.first_name} {obj.middle_name} {obj.last_name}"
+    get_full_name.short_description = _('full name')
 
 
 

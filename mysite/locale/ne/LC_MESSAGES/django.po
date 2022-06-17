@@ -1,0 +1,322 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-17 19:55+0545\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: dwp/admin.py:26 user_account/admin.py:50
+msgid "full name"
+msgstr "पुरा नाम"
+
+#: dwp/apps.py:7
+msgid "Drinking Water Project"
+msgstr "खानेपानी आयोजना"
+
+#: dwp/models.py:9 dwp/models.py:24 user_account/models.py:28
+msgid "user"
+msgstr "प्रयोगकर्ता"
+
+#: dwp/models.py:10 dwp/models.py:42
+msgid "meter number"
+msgstr "मिटर नम्बर"
+
+#: dwp/models.py:16 dwp/models.py:37 dwp/models.py:60
+msgid "water meter"
+msgstr "पानी मिटर"
+
+#: dwp/models.py:17
+msgid "water meters"
+msgstr "पानी मिटरहरू"
+
+#: dwp/models.py:21
+#, fuzzy
+#| msgid "meter reading"
+msgid "meter reader"
+msgstr "मिटर रिडिङ"
+
+#: dwp/models.py:22
+#, fuzzy
+#| msgid "maintainance charge"
+msgid "tap maintainer"
+msgstr "रखरखाव शुल्क"
+
+#: dwp/models.py:25
+msgid "salary"
+msgstr "तलब"
+
+#: dwp/models.py:26
+msgid "type_of_employee"
+msgstr "कर्मचारी को प्रकार"
+
+#: dwp/models.py:29 dwp/models.py:114
+msgid "employee"
+msgstr "कर्मचारी"
+
+#: dwp/models.py:30
+msgid "employees"
+msgstr "कर्मचारीहरु"
+
+#: dwp/models.py:38
+msgid "current reading"
+msgstr "वर्तमान पढाइ"
+
+#: dwp/models.py:39
+msgid "previous reading"
+msgstr "अघिल्लो पढाइ"
+
+#: dwp/models.py:40
+msgid "minimum charge"
+msgstr "न्यूनतम शुल्क"
+
+#: dwp/models.py:41
+msgid "extra consumption charge"
+msgstr "अतिरिक्त खपत शुल्क"
+
+#: dwp/models.py:43
+msgid "read by"
+msgstr "पढ्ने व्यक्ति"
+
+#: dwp/models.py:44 dwp/models.py:116
+msgid "date"
+msgstr ""
+
+#: dwp/models.py:47
+msgid "meter reading"
+msgstr "मिटर रिडिङ"
+
+#: dwp/models.py:48
+msgid "meter readings"
+msgstr "मिटर रिडिङहरू"
+
+#: dwp/models.py:61
+msgid "water charge"
+msgstr "पानी चार्ज"
+
+#: dwp/models.py:62
+msgid "late fine"
+msgstr "ढिलो चार्ज"
+
+#: dwp/models.py:63
+msgid "maintainance charge"
+msgstr "रखरखाव शुल्क"
+
+#: dwp/models.py:64
+msgid "new meter cost"
+msgstr "नयाँ मिटर लागत"
+
+#: dwp/models.py:65
+msgid "extra fees"
+msgstr "अतिरिक्त शुल्क"
+
+#: dwp/models.py:66
+msgid "discount"
+msgstr "छुट"
+
+#: dwp/models.py:67
+msgid "total"
+msgstr "कुल"
+
+#: dwp/models.py:68
+msgid "entered by"
+msgstr "दर्ता गर्ने व्यक्ति"
+
+#: dwp/models.py:71
+msgid "is_paid"
+msgstr "भुक्तान गरिएको छ"
+
+#: dwp/models.py:77
+msgid "bill"
+msgstr "बिल"
+
+#: dwp/models.py:78
+msgid "bills"
+msgstr "बिलहरू"
+
+#: dwp/models.py:115
+msgid "received_amount"
+msgstr "प्राप्त रकम"
+
+#: dwp/models.py:119
+msgid "payment receipt"
+msgstr "भुक्तानी रसिद"
+
+#: dwp/models.py:120
+msgid "payment receipts"
+msgstr "भुक्तानी रसिदहरू"
+
+#: dwp/views.py:25 mysite/urls.py:9
+msgid "Aangal Drinking Water Administration"
+msgstr "आङ्गल पिउने पानी प्रशासन"
+
+#: mysite/settings.py:128
+msgid "English"
+msgstr "अंग्रेजी"
+
+#: mysite/settings.py:129
+msgid "Spanish"
+msgstr "स्पेनिस"
+
+#: mysite/settings.py:130
+msgid "Nepal"
+msgstr ""
+
+#: mysite/urls.py:10
+msgid "ADWP admin site"
+msgstr "ADWP प्रशासक साइट"
+
+#: templates/admin/base.html:38
+msgid "Welcome,"
+msgstr "स्वागत छ"
+
+#: templates/admin/base.html:43
+msgid "View site"
+msgstr "साइट हेर्नुहोस्"
+
+#: templates/admin/base.html:48
+msgid "Documentation"
+msgstr "दस्तावेजीकरण"
+
+#: templates/admin/base.html:52
+msgid "Change password"
+msgstr ""
+
+#: templates/admin/base.html:54
+msgid "Report"
+msgstr "रिपोर्ट"
+
+#: templates/admin/base.html:55
+msgid "Log out"
+msgstr ""
+
+#: templates/admin/base.html:66 templates/registration/logged_out.html:4
+msgid "Home"
+msgstr ""
+
+#: templates/admin/base_site.html:3 templates/dwp/report.html:3
+#, fuzzy
+#| msgid "Django  admin"
+msgid "Django site admin"
+msgstr "जाङ्गो व्यवस्थापक"
+
+#: templates/admin/base_site.html:6 templates/dwp/report.html:7
+msgid "Django administration"
+msgstr "जाङ्गो प्रशासन"
+
+#: templates/dwp/report.html:17
+msgid "Collected Amount"
+msgstr "जम्मा भएको रकम"
+
+#: templates/dwp/report.html:24
+msgid "Remaining Amount"
+msgstr "बाँकी रकम"
+
+#: templates/registration/logged_out.html:10
+#, fuzzy
+#| msgid "Thanks for spending some quality time with the web site today."
+msgid ""
+"Thanks for spending some quality time with the web site today. Welcome bro "
+msgstr "आज वेब साइट संग केहि गुणस्तर समय खर्च गर्नुभएकोमा धन्यवाद।"
+
+#: templates/registration/logged_out.html:12
+msgid "Log in again"
+msgstr ""
+
+#: user_account/admin.py:25
+msgid "Permissions"
+msgstr "अनुमतिहरू"
+
+#: user_account/apps.py:7
+msgid "Users"
+msgstr "प्रयोगकर्ताहरू"
+
+#: user_account/customUserManager.py:10
+msgid "Email must be set"
+msgstr ""
+
+#: user_account/customUserManager.py:12
+msgid "first name must be set"
+msgstr ""
+
+#: user_account/customUserManager.py:14
+msgid "last name must be set"
+msgstr ""
+
+#: user_account/forms.py:13
+msgid "Password"
+msgstr "पासवर्ड"
+
+#: user_account/forms.py:14
+msgid "Password confirmation"
+msgstr "पासवर्ड पुष्टिकरण"
+
+#: user_account/forms.py:15 user_account/models.py:18
+msgid "phone number"
+msgstr "फोन नम्बर"
+
+#: user_account/forms.py:28
+msgid "Passwords don't match"
+msgstr ""
+
+#: user_account/forms.py:37
+msgid ""
+"Password must contain atleats one digit special characrers and uppercase "
+"letter"
+msgstr "पासवर्डमा कम्तिमा एक अंक, एउटा विशेष क्यारेक्टर र कम्तिमा एउटा ठूलो अक्षर हुनु पर्छ"
+
+#: user_account/models.py:11
+msgid "first name"
+msgstr ""
+
+#: user_account/models.py:12
+msgid "middle name"
+msgstr "बीचको नाम"
+
+#: user_account/models.py:13
+msgid "last name"
+msgstr ""
+
+#: user_account/models.py:14
+msgid "email address"
+msgstr ""
+
+#: user_account/models.py:15
+msgid "municipality"
+msgstr "नगरपालिका"
+
+#: user_account/models.py:16
+msgid "ward number"
+msgstr "वार्ड नम्बर"
+
+#: user_account/models.py:17
+msgid "tole"
+msgstr "टोल"
+
+#: user_account/models.py:19
+msgid "date joiner"
+msgstr ""
+
+#: user_account/models.py:20
+msgid "is staff"
+msgstr ""
+
+#: user_account/models.py:21
+msgid "is active"
+msgstr ""
+
+#: user_account/models.py:29
+msgid "users"
+msgstr "प्रयोगकर्ताहरू"

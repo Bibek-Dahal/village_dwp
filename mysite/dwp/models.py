@@ -6,11 +6,32 @@ from datetime import date,timedelta,datetime
 
 
 class WaterMeter(models.Model):
-    user = models.OneToOneField(MyUser,on_delete=models.CASCADE)
+    user = models.OneToOneField(MyUser,on_delete=models.CASCADE,verbose_name=_('user'))
     meter_num = models.CharField(_('meter number'),max_length=20,primary_key=True)
 
     def __str__(self):
         return self.meter_num
+
+    class Meta:
+        verbose_name = _('water meter')
+        verbose_name_plural = _('water meters')
+
+class Employee(models.Model):
+    type_choices = (
+        (_('meter reader'),_('meter reader')),
+        (_('tap maintainer'),_('tap maintainer'))
+    )
+    user = models.OneToOneField(MyUser,on_delete=models.CASCADE,verbose_name=_('user'))
+    salary = models.PositiveIntegerField(_('salary'))
+    type_of_employee = models.CharField(_('type_of_employee'),max_length=30,choices=type_choices)
+
+    class Meta:
+        verbose_name = _('employee')
+        verbose_name_plural = _('employees')
+    
+    def __str__(self):
+        return self.user.email
+
 
 class MeterReading(models.Model):
     water_meter = models.ForeignKey(WaterMeter,verbose_name=_('water meter'),on_delete=models.PROTECT)
@@ -19,12 +40,15 @@ class MeterReading(models.Model):
     minimum_charge = models.PositiveSmallIntegerField(_('minimum charge'),)
     extra_consumption_charge = models.PositiveSmallIntegerField(_('extra consumption charge'),default=0)
     total = models.PositiveSmallIntegerField(_('meter number'),)
-    read_by = models.ForeignKey(MyUser,on_delete=models.PROTECT,verbose_name=_('read by'))
+    read_by = models.ForeignKey(Employee,on_delete=models.PROTECT,verbose_name=_('read by'))
     date = models.DateField(_('date'),)
     
+    class Meta:
+        verbose_name = _('meter reading')
+        verbose_name_plural = _('meter readings')
 
     def __str__(self):
-        return f"{self.water_meter.meter_num}   {self.date}"
+        return f"{self.water_meter.meter_num}"
 
     @property
     def water_consumed(self):
@@ -32,8 +56,6 @@ class MeterReading(models.Model):
         return self.current_reading-self.previous_reading
     
     
-
-
 class Bill(models.Model):
     water_meter = models.OneToOneField(MeterReading,on_delete=models.PROTECT,verbose_name=_('water meter'))
     water_charge = models.PositiveSmallIntegerField(_('water charge'))
@@ -43,7 +65,7 @@ class Bill(models.Model):
     extra_fees = models.PositiveSmallIntegerField(_('extra fees'),null=True,blank=True)
     discount = models.PositiveSmallIntegerField(_('discount'),null=True,blank=True)
     total = models.PositiveSmallIntegerField(_('total'),null=True,blank=True)
-    entered_by = models.ForeignKey(MyUser,on_delete=models.PROTECT,verbose_name=_('entered by'))
+    entered_by = models.ForeignKey(Employee,on_delete=models.PROTECT,verbose_name=_('entered by'))
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     is_paid = models.BooleanField(default=False,verbose_name=_('is_paid'))
@@ -63,21 +85,37 @@ class Bill(models.Model):
     def days_passed(self):
         print(print(self.created_at.tzinfo))
         ellapsed_days = (timezone.now()-self.created_at).days
-        # return ellapsed_days
-        return 6
+        return ellapsed_days
+        
     
     @property
     def fine(self):
-        initial_fine=0
-        if self.days_passed()-5 < 0:
-            return initial_fine 
+        if self.is_paid == True:
+            return self.late_fine
         else:
-            initial_fine = (self.days_passed()-5)*10
-            return initial_fine
+            initial_fine=0
+            if self.days_passed()-5 < 0:
+                return initial_fine 
+            else:
+                #calculate late fine in days passed is gte 5 by 10
+                initial_fine = (self.days_passed()-5)*10
+                self.late_fine = initial_fine
+                arr = [self.water_charge,self.late_fine,self.maintainance_charge,self.new_meter_cost,self.extra_fees]
+                before_sum = [attr for attr in arr if attr is not None]
+                self.total = sum(before_sum)
+                if self.discount:
+                    self.total = self.total - self.discount
+                self.save()
+                return initial_fine
+    
+    
 
+class PaymentReceipt(models.Model):
+    employee = models.ForeignKey(Employee,on_delete=models.SET_NULL,null=True,verbose_name=_('employee'))
+    received_amount = models.PositiveSmallIntegerField(_('received_amount'))
+    date = models.DateTimeField(_('date'),auto_now_add=True)
 
-
-
-
-
+    class Meta:
+        verbose_name = _('payment receipt')
+        verbose_name_plural = _('payment receipts')
 

@@ -35,6 +35,9 @@ class MyUser(AbstractBaseUser,PermissionsMixin):
         """Send an email to this user."""
         send_mail(subject, message, from_email, [self.email], **kwargs)
 
-    @property
-    def full_name(self):
-        return f"{self.first_name} {self.middle_name} {self.last_name}"   
+    # @property
+    # def get_full_name(self):
+    #     return f"{self.first_name} {self.middle_name} {self.last_name}"  
+    
+    # x = property(get_full_name) 
+    

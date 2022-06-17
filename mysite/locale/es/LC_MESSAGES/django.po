@@ -1,0 +1,314 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-17 19:55+0545\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: dwp/admin.py:26 user_account/admin.py:50
+msgid "full name"
+msgstr ""
+
+#: dwp/apps.py:7
+msgid "Drinking Water Project"
+msgstr ""
+
+#: dwp/models.py:9 dwp/models.py:24 user_account/models.py:28
+msgid "user"
+msgstr ""
+
+#: dwp/models.py:10 dwp/models.py:42
+msgid "meter number"
+msgstr ""
+
+#: dwp/models.py:16 dwp/models.py:37 dwp/models.py:60
+msgid "water meter"
+msgstr ""
+
+#: dwp/models.py:17
+msgid "water meters"
+msgstr ""
+
+#: dwp/models.py:21
+msgid "meter reader"
+msgstr ""
+
+#: dwp/models.py:22
+msgid "tap maintainer"
+msgstr ""
+
+#: dwp/models.py:25
+msgid "salary"
+msgstr ""
+
+#: dwp/models.py:26
+msgid "type_of_employee"
+msgstr ""
+
+#: dwp/models.py:29 dwp/models.py:114
+msgid "employee"
+msgstr ""
+
+#: dwp/models.py:30
+msgid "employees"
+msgstr ""
+
+#: dwp/models.py:38
+msgid "current reading"
+msgstr ""
+
+#: dwp/models.py:39
+msgid "previous reading"
+msgstr ""
+
+#: dwp/models.py:40
+msgid "minimum charge"
+msgstr ""
+
+#: dwp/models.py:41
+msgid "extra consumption charge"
+msgstr ""
+
+#: dwp/models.py:43
+msgid "read by"
+msgstr ""
+
+#: dwp/models.py:44 dwp/models.py:116
+msgid "date"
+msgstr ""
+
+#: dwp/models.py:47
+msgid "meter reading"
+msgstr ""
+
+#: dwp/models.py:48
+msgid "meter readings"
+msgstr ""
+
+#: dwp/models.py:61
+msgid "water charge"
+msgstr ""
+
+#: dwp/models.py:62
+msgid "late fine"
+msgstr ""
+
+#: dwp/models.py:63
+msgid "maintainance charge"
+msgstr ""
+
+#: dwp/models.py:64
+msgid "new meter cost"
+msgstr ""
+
+#: dwp/models.py:65
+msgid "extra fees"
+msgstr ""
+
+#: dwp/models.py:66
+msgid "discount"
+msgstr ""
+
+#: dwp/models.py:67
+msgid "total"
+msgstr ""
+
+#: dwp/models.py:68
+msgid "entered by"
+msgstr ""
+
+#: dwp/models.py:71
+msgid "is_paid"
+msgstr ""
+
+#: dwp/models.py:77
+msgid "bill"
+msgstr ""
+
+#: dwp/models.py:78
+msgid "bills"
+msgstr ""
+
+#: dwp/models.py:115
+msgid "received_amount"
+msgstr ""
+
+#: dwp/models.py:119
+msgid "payment receipt"
+msgstr ""
+
+#: dwp/models.py:120
+msgid "payment receipts"
+msgstr ""
+
+#: dwp/views.py:25 mysite/urls.py:9
+msgid "Aangal Drinking Water Administration"
+msgstr "Aangal Khenepani Aayojana"
+
+#: mysite/settings.py:128
+msgid "English"
+msgstr ""
+
+#: mysite/settings.py:129
+msgid "Spanish"
+msgstr ""
+
+#: mysite/settings.py:130
+msgid "Nepal"
+msgstr ""
+
+#: mysite/urls.py:10
+msgid "ADWP admin site"
+msgstr ""
+
+#: templates/admin/base.html:38
+msgid "Welcome,"
+msgstr ""
+
+#: templates/admin/base.html:43
+msgid "View site"
+msgstr ""
+
+#: templates/admin/base.html:48
+msgid "Documentation"
+msgstr ""
+
+#: templates/admin/base.html:52
+msgid "Change password"
+msgstr ""
+
+#: templates/admin/base.html:54
+msgid "Report"
+msgstr ""
+
+#: templates/admin/base.html:55
+msgid "Log out"
+msgstr ""
+
+#: templates/admin/base.html:66 templates/registration/logged_out.html:4
+msgid "Home"
+msgstr ""
+
+#: templates/admin/base_site.html:3 templates/dwp/report.html:3
+msgid "Django site admin"
+msgstr ""
+
+#: templates/admin/base_site.html:6 templates/dwp/report.html:7
+msgid "Django administration"
+msgstr ""
+
+#: templates/dwp/report.html:17
+msgid "Collected Amount"
+msgstr ""
+
+#: templates/dwp/report.html:24
+msgid "Remaining Amount"
+msgstr ""
+
+#: templates/registration/logged_out.html:10
+msgid ""
+"Thanks for spending some quality time with the web site today. Welcome bro "
+msgstr ""
+
+#: templates/registration/logged_out.html:12
+msgid "Log in again"
+msgstr ""
+
+#: user_account/admin.py:25
+msgid "Permissions"
+msgstr ""
+
+#: user_account/apps.py:7
+msgid "Users"
+msgstr ""
+
+#: user_account/customUserManager.py:10
+msgid "Email must be set"
+msgstr ""
+
+#: user_account/customUserManager.py:12
+msgid "first name must be set"
+msgstr ""
+
+#: user_account/customUserManager.py:14
+msgid "last name must be set"
+msgstr ""
+
+#: user_account/forms.py:13
+msgid "Password"
+msgstr ""
+
+#: user_account/forms.py:14
+msgid "Password confirmation"
+msgstr ""
+
+#: user_account/forms.py:15 user_account/models.py:18
+msgid "phone number"
+msgstr ""
+
+#: user_account/forms.py:28
+msgid "Passwords don't match"
+msgstr ""
+
+#: user_account/forms.py:37
+msgid ""
+"Password must contain atleats one digit special characrers and uppercase "
+"letter"
+msgstr ""
+
+#: user_account/models.py:11
+msgid "first name"
+msgstr ""
+
+#: user_account/models.py:12
+msgid "middle name"
+msgstr ""
+
+#: user_account/models.py:13
+msgid "last name"
+msgstr ""
+
+#: user_account/models.py:14
+msgid "email address"
+msgstr ""
+
+#: user_account/models.py:15
+msgid "municipality"
+msgstr ""
+
+#: user_account/models.py:16
+msgid "ward number"
+msgstr ""
+
+#: user_account/models.py:17
+msgid "tole"
+msgstr ""
+
+#: user_account/models.py:19
+msgid "date joiner"
+msgstr ""
+
+#: user_account/models.py:20
+msgid "is staff"
+msgstr ""
+
+#: user_account/models.py:21
+msgid "is active"
+msgstr ""
+
+#: user_account/models.py:29
+msgid "users"
+msgstr ""
